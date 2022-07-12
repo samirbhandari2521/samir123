@@ -1,0 +1,99 @@
+<html>
+    <head>
+<style>
+    .input{
+        resize: none;
+        width: 50em;
+        height: 25em;
+        font-size: 1ems;
+        background-color: rgb(236, 204, 204,0.2);
+        color:white;
+        padding: 1em;
+        border-radius: 3em;;
+        border:0.5em solid rgb(255, 255, 255);
+        
+    }
+    #input{
+        margin-top: 3em;
+        margin-bottom:2em;
+    }
+    #header{
+        margin-top: 1em;
+        width: 20em;
+        text-align: center;
+        font-size:1.6em;
+        font-weight: bold;
+        color:white;
+    }
+    #main{
+        border: 2px solid rgb(45, 40, 40);
+        border-radius: 4em;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+        margin-left:0.5em;
+        height: 100%;
+        background-color: black;
+    }
+    .btn{
+        display: inline-block;
+        width: 10em;
+        margin: 0.4em;
+        background-color: rgb(226, 153, 153,0,3);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        border: 0.2em solid white;
+        border-radius: 2em;
+        text-transform: uppercase;
+        padding: 0.2em;
+        font-weight: bold;
+    }
+    #btn2{
+        margin-bottom: 3em;
+    }
+</style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="header">This is Cryptography Software</div>
+            <textarea id="input" class="input"></textarea><br>
+            <div>
+                 <button class="btn" onclick="enc()">encrypt</button>
+                <button id="btn2"  class="btn" onclick="dyc()">decrypt</button></div>
+           
+            <textarea class="input" id="outputt"></textarea><br>
+        </div>
+       
+    </body>
+</html>
+<script>
+ function enc(){
+    var k=""
+   var t= document.getElementById('input').value;
+   for(i=0;i<t.length;i++){
+       var y=t.charCodeAt(i);
+       var char = String.fromCharCode(y+5);
+        k=k+char;
+   }
+   var u=document.getElementById('outputt').value=k;
+   
+   
+    // const n=document.getElementById('s').value
+    
+    // alert(y);
+    
+    // alert(char);
+    
+ };
+ function dyc(){
+    var k=""
+   var t= document.getElementById('input').value;
+   for(i=0;i<t.length;i++){
+       var y=t.charCodeAt(i);
+       var char = String.fromCharCode(y-5);
+        k=k+char;
+   }
+   var u=document.getElementById('outputt').value=k;
+ }
+</script>
