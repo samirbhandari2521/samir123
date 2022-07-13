@@ -3,9 +3,9 @@
 <style>
     .input{
         resize: none;
-        width: 50em;
-        height: 25em;
-        font-size: 1ems;
+        width: 75vw;
+        height: 40vh;
+        font-size: 1em;
         background-color: rgb(236, 204, 204,0.2);
         color:white;
         padding: 1em;
@@ -16,6 +16,7 @@
     #input{
         margin-top: 3em;
         margin-bottom:2em;
+       
     }
     #header{
         margin-top: 1em;
@@ -73,17 +74,11 @@
    var t= document.getElementById('input').value;
    for(i=0;i<t.length;i++){
        var y=t.charCodeAt(i);
-       var char = String.fromCharCode(y+50);
+       var char = String.fromCharCode(y+70);
         k=k+char;
    }
    var u=document.getElementById('outputt').value=k;
    
-   
-    // const n=document.getElementById('s').value
-    
-    // alert(y);
-    
-    // alert(char);
     
  };
  function dyc(){
@@ -91,9 +86,10 @@
    var t= document.getElementById('input').value;
    for(i=0;i<t.length;i++){
        var y=t.charCodeAt(i);
-       var char = String.fromCharCode(y-50);
+       var char = String.fromCharCode(y-70);
         k=k+char;
    }
    var u=document.getElementById('outputt').value=k;
+   
  }
 </script>
